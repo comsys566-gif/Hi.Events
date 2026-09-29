@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-f'
+      - 'Dockerfile.all-in-one'
+      - '-t'
+      - 'asia-northeast2-docker.pkg.dev/$PROJECT_ID/hi-events/app:latest'
+      - '.'
+
+images:
+  - 'asia-northeast2-docker.pkg.dev/$PROJECT_ID/hi-events/app:latest'
